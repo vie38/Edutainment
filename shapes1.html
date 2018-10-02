@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>shapes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/spinbox/latest/jqm-spinbox.min.js"></script>
+	
+	<script>
+    function goToFile1() {
+	      <!--window.open("file2.html"); -->
+		  window.location.href = "main1.html" 
+//		  id="alphabets"
+	    }
+	</script>
+	
+	<script>
+	ids = new Array(20); // an array with total number of ids
+	function aud_play_pause(idNumber) {
+	var idNumber = document.getElementById(idNumber);
+
+	for(var i=0; i<ids.length; i++){
+	document.getElementById(i+1).pause(); // Pause all ids before playing next file.
+	document.getElementById(i+1).currentTime = 0; // Set the time back to zero, else it will replay from the pause point.
+	}
+
+	idNumber.play();
+	}
+	</script>
+	
+	<script type="text/javascript">
+$(document).ready(function() {
+$("#btnGetValue").click(function() {
+//$('#result').empty();
+var newline = "\r\n"
+var message = " "
+var message1 = "Selected answer is:-"
+var message2 = "Correct answer is:-"
+var SELvalue = $('input[name=radio-choice-1]:checked').val();
+var SELvalue2 = $('input[name=radio-choice-2]:checked').val();
+var SELvalue3 = $('input[name=radio-choice-3]:checked').val();
+var SELvalue4 = $('input[name=radio-choice-4]:checked').val();
+var SELvalue5 = $('input[name=radio-choice-5]:checked').val();
+var CORvalue = ("THREE")
+var CORvalue2 = ("FIVE")
+var CORvalue3 = ("TWO")
+var CORvalue4 = ("TEN")
+var CORvalue5 = ("TWENTY")
+message += message1 + SELvalue + ' ' + message2 + CORvalue;
+message += newline;
+message += message1 + SELvalue2 + ' ' + message2 + CORvalue2;
+message += newline;
+message += message1 + SELvalue3 + ' ' + message2 + CORvalue3;
+message += newline;
+message += message1 + SELvalue4 + ' ' + message2 + CORvalue4;
+message += newline;
+message += message1 + SELvalue5 + ' ' + message2 + CORvalue5;
+
+
+
+//if($("form input[name=radio-choice-1]").is(':checked')) {
+//$('#result').append("Checked Radio Button Value is :<span> "+ value +" </span>");
+//$('#result').html('<br/>Selected Radio Button Value 1 is : <b>' + SELvalue + 
+	//'<br/>Selected Radio Button Value 2 is :' + SELvalue2 + '</b>');
+//alert(SELvalue + '  ' + SELvalue2); 
+alert(message);
+//);
+
+//else{
+//alert(" Please Select any Option ");
+//}
+});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // Function to get input value.
+$('#submit2').click(function() {
+
+var newline = "\r\n"
+var Tmessage = " "
+var Tmessage1 = "Selected answer is:-"
+var Tmessage2 = "Correct answer is:-"
+var Textvalue = $('#text-1').val();
+var Textvalue2 = $('#text-2').val();
+var Textvalue3 = $('#text-3').val();
+var Textvalue4 = $('#text-4').val();
+var Textvalue5 = $('#text-5').val();
+var CORTvalue = ("ONE")
+var CORTvalue2 = ("TWENTY")
+var CORTvalue3 = ("FIVE")
+var CORTvalue4 = ("TEN")
+var CORTvalue5 = ("TWO")
+Tmessage += Tmessage1 + Textvalue + ' ' + Tmessage2 + CORTvalue;
+Tmessage += newline;
+Tmessage += Tmessage1 + Textvalue2 + ' ' + Tmessage2 + CORTvalue2;
+Tmessage += newline;
+Tmessage += Tmessage1 + Textvalue3 + ' ' + Tmessage2 + CORTvalue3;
+Tmessage += newline;
+Tmessage += Tmessage1 + Textvalue4 + ' ' + Tmessage2 + CORTvalue4;
+Tmessage += newline;
+Tmessage += Tmessage1 + Textvalue5 + ' ' + Tmessage2 + CORTvalue5;
+
+//var text_value = $("#text-2").val();
+if(Textvalue=='' || Textvalue2=='' || Textvalue3=='' || Textvalue4=='' || Textvalue5=='') {
+alert("Enter Some Text In Input Field");
+}
+
+else{
+alert(Tmessage);
+}
+});
+//$('#text_reset').click(function() {
+//$("#text-2").val('');
+});
+
+</script>
+	
+	
+	
+  </head>
+  <body>
+  <li><a href="#main1" onclick="goToFile1(); return false;">Home</a></li>
+    <div id="pagenumber" data-role="tabs">
+<div data-role="navbar">
+    <ul>
+      <li><a href="#shapes" data-ajax="false">SHAPES</a></li>
+      <li><a href="#quiz1" data-ajax="false">QUIZ 1</a></li>
+	  <li><a href="#quiz2" data-ajax="false">QUIZ 2</a></li>
+	  <!-- <li><a href="ajax-content-ignore.html" data-ajax="false">three</a></li> -->
+    </ul>
+  </div>
+  <div class="ui-body-d ui-content" id="shapes">
+  <img id="u1_img2" class="img " src="images/shapes.jpg" align="right-side" style="width: 10%;"/>
+  <h1>SHAPES</h1>
+  	<ul data-role="listview" data-inset="true" data-filter="true" data-autodividers="false">
+	
+		<li><img src="images/one.jpg">ONE<audio id="1" preload="auto"><source src="audio/1.mp3"></audio>
+		<button onclick="aud_play_pause('1')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/two.jpg">TWO<audio id="2" preload="auto"><source src="audio/2.mp3"></audio>
+		<button onclick="aud_play_pause('2')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/three.jpg">THREE<audio id="3" preload="auto"><source src="audio/3.mp3"></audio>
+		<button onclick="aud_play_pause('3')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/four.jpg">FOUR<audio id="4" preload="auto"><source src="audio/4.mp3"></audio>
+		<button onclick="aud_play_pause('4')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/five.jpg">FIVE<audio id="5" preload="auto"><source src="audio/5.mp3"></audio>
+		<button onclick="aud_play_pause('5')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/six.jpg">SIX<audio id="6" preload="auto"><source src="audio/6.mp3"></audio>
+		<button onclick="aud_play_pause('6')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/seven.jpg">SEVEN<audio id="7" preload="auto"><source src="audio/7.mp3"></audio>
+		<button onclick="aud_play_pause('7')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/eight.jpg">EIGHT<audio id="8" preload="auto"><source src="audio/8.mp3"></audio>
+		<button onclick="aud_play_pause('8')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/nine.jpg">NINE<audio id="9" preload="auto"><source src="audio/9.mp3"></audio>
+		<button onclick="aud_play_pause('9')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/ten.jpg">TEN<audio id="10" preload="auto"><source src="audio/10.mp3"></audio>
+		<button onclick="aud_play_pause('10')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		
+		<li><img src="images/eleven.jpg">ELEVEN<audio id="11" preload="auto"><source src="audio/11.mp3"></audio>
+		<button onclick="aud_play_pause('11')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/twelve.jpg">TWELVE<audio id="12" preload="auto"><source src="audio/12.mp3"></audio>
+		<button onclick="aud_play_pause('12')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/thirteen.jpg">THIRTEEN<audio id="13" preload="auto"><source src="audio/13.mp3"></audio>
+		<button onclick="aud_play_pause('13')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/fourteen.jpg">FOURTEEN<audio id="14" preload="auto"><source src="audio/14.mp3"></audio>
+		<button onclick="aud_play_pause('14')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/fifteen.jpg">FIFTEEN<audio id="15" preload="auto"><source src="audio/15.mp3"></audio>
+		<button onclick="aud_play_pause('15')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/sixteen.jpg">SIXTEEN<audio id="16" preload="auto"><source src="audio/16.mp3"></audio>
+		<button onclick="aud_play_pause('16')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/seventeen.jpg">SEVENTEEN<audio id="17" preload="auto"><source src="audio/17.mp3"></audio>
+		<button onclick="aud_play_pause('17')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/eighteen.jpg">EIGHTEEN<audio id="18" preload="auto"><source src="audio/18.mp3"></audio>
+		<button onclick="aud_play_pause('18')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/nineteen.jpg">NINETEEN<audio id="19" preload="auto"><source src="audio/19.mp3"></audio>
+		<button onclick="aud_play_pause('19')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		<li><img src="images/twenty.jpg">TWENTY<audio id="20" preload="auto"><source src="audio/20.mp3"></audio>
+		<button onclick="aud_play_pause('20')" style="width:3px"; "height=3px"><img src="audio/sound.jpg" width= "40" height="40"></button></li> 
+		
+    </ul> 
+   </div>
+   
+   <div id="quiz1">
+     <img id="u1_img2" class="img " src="images/shapes.jpg" align="right-side" style="width: 10%;"/>
+	 <h1>QUIZ 1</h1>
+	 <ul data-role="listview" data-inset="true">
+    <li data-role="list-divider"><h1>Choose the correct answer</h1></li><img id="u1_img2" class="img " src="images/three.jpg" style="width: 20%;"/>
+    <li data-role="fieldcontain1">
+        <fieldset data-role="controlgroup1">
+                 <input type="radio" name="radio-choice-1" id="radio-choice-1" value="ONE" checked="checked" />
+                 <label for="radio-choice-1">ONE</label>
+                 <input type="radio" name="radio-choice-1" id="radio-choice-2" value="TWO"  />
+                 <label for="radio-choice-2">TWO</label>
+                 <input type="radio" name="radio-choice-1" id="radio-choice-3" value="THREE"  />
+                 <label for="radio-choice-3">THREE</label>
+                 <input type="radio" name="radio-choice-1" id="radio-choice-4" value="FOUR"  />
+                 <label for="radio-choice-4">FOUR</label>
+        </fieldset>
+		</li>
+		</ul>
+		<ul data-role="listview" data-inset="true">
+		<li data-role="list-divider">Choose the correct answer</li><img id="u1_img2" class="img " src="images/five.jpg" style="width: 20%;"/>
+    <li data-role="fieldcontain2">
+		<fieldset data-role="controlgroup2">
+                 <input type="radio" name="radio-choice-2" id="radio-choice-21" value="ONE" checked="checked" />
+                 <label for="radio-choice-21">ONE</label>
+                 <input type="radio" name="radio-choice-2" id="radio-choice-22" value="FIVE"  />
+                 <label for="radio-choice-22">FIVE</label>
+                 <input type="radio" name="radio-choice-2" id="radio-choice-23" value="TWO"  />
+                 <label for="radio-choice-23">TWO</label>
+                 <input type="radio" name="radio-choice-2" id="radio-choice-24" value="THREE"  />
+                 <label for="radio-choice-24">THREE</label>
+        </fieldset>
+    </li>
+  </ul>
+  <ul data-role="listview" data-inset="true">
+		<li data-role="list-divider">Choose the correct answer</li><img id="u1_img2" class="img " src="images/one.jpg" style="width: 20%;"/>
+    <li data-role="fieldcontain3">
+		<fieldset data-role="controlgroup3">
+                 <input type="radio" name="radio-choice-3" id="radio-choice-31" value="ONE" checked="checked" />
+                 <label for="radio-choice-31">ONE</label>
+                 <input type="radio" name="radio-choice-3" id="radio-choice-32" value="FIVE"  />
+                 <label for="radio-choice-32">FIVE</label>
+                 <input type="radio" name="radio-choice-3" id="radio-choice-33" value="TEN"  />
+                 <label for="radio-choice-33">TEN</label>
+                 <input type="radio" name="radio-choice-3" id="radio-choice-34" value="THREE"  />
+                 <label for="radio-choice-34">THREE</label>
+        </fieldset>
+    </li>
+  </ul>
+<ul data-role="listview" data-inset="true">
+		<li data-role="list-divider">Choose the correct answer</li><img id="u1_img2" class="img " src="images/ten.jpg" style="width: 20%;"/>
+    <li data-role="fieldcontain4">
+		<fieldset data-role="controlgroup4">
+                 <input type="radio" name="radio-choice-4" id="radio-choice-41" value="ONE" checked="checked" />
+                 <label for="radio-choice-41">ONE</label>
+                 <input type="radio" name="radio-choice-4" id="radio-choice-42" value="TEN"  />
+                 <label for="radio-choice-42">TEN</label>
+                 <input type="radio" name="radio-choice-4" id="radio-choice-43" value="FOUR"  />
+                 <label for="radio-choice-43">FOUR</label>
+                 <input type="radio" name="radio-choice-4" id="radio-choice-44" value="FIFTEEN"  />
+                 <label for="radio-choice-44">FIFTEEN</label>
+        </fieldset>
+    </li>
+  </ul>
+  <ul data-role="listview" data-inset="true">
+		<li data-role="list-divider">Choose the correct answer</li><img id="u1_img2" class="img " src="images/twenty.jpg" style="width: 20%;"/>
+    <li data-role="fieldcontain5">
+		<fieldset data-role="controlgroup5">
+                 <input type="radio" name="radio-choice-5" id="radio-choice-51" value="ONE" checked="checked" />
+                 <label for="radio-choice-51">ONE</label>
+                 <input type="radio" name="radio-choice-5" id="radio-choice-52" value="FOUR"  />
+                 <label for="radio-choice-52">FOUR</label>
+                 <input type="radio" name="radio-choice-5" id="radio-choice-53" value="TWENTY"  />
+                 <label for="radio-choice-53">TWENTY</label>
+                 <input type="radio" name="radio-choice-5" id="radio-choice-54" value="FIFTEEN"  />
+                 <label for="radio-choice-54">FIFTEEN</label>
+        </fieldset>
+    </li>
+  </ul>
+  </div>
+  
+  <div id="quiz2">
+  <img id="u1_img2" class="img " src="images/shapes.jpg" align="right-side" style="width: 10%;"/>
+  <h1>QUIZ 2</h1>
+  <ul data-role="listview" data-inset="true">
+  
+    <!--<fieldset data-role="controlgroup"> -->
+        <legend><h3>Type the correct answer</h3></legend><img id="u1_img2" class="img " src="images/one.jpg" style="width: 20%;"/>
+        <label for="text-1">Text input: </label>
+		<input name="text-1" id="text-1" type="text" value="" data-clear-btn="true">
+    
+        <li><legend><h3>Type the correct answer</h3></legend></li><img id="u1_img2" class="img " src="images/twenty.jpg" style="width: 20%;"/>
+        <label for="text-2">Text input: </label>
+		<input name="text-2" id="text-2" type="text" value="" data-clear-btn="true">
+		
+		<li><legend><h3>Type the correct answer</h3></legend></li><img id="u1_img2" class="img " src="images/five.jpg" style="width: 20%;"/>
+        <label for="text-3">Text input: </label>
+		<input name="text-3" id="text-3" type="text" value="" data-clear-btn="true">
+		
+		<li><legend><h3>Type the correct answer</h3></legend></li><img id="u1_img2" class="img " src="images/ten.jpg" style="width: 20%;"/>
+        <label for="text-4">Text input: </label>
+		<input name="text-4" id="text-4" type="text" value="" data-clear-btn="true">
+		
+		<li><legend><h3>Type the correct answer</h3></legend></li><img id="u1_img2" class="img " src="images/two.jpg" style="width: 20%;"/>
+        <label for="text-5">Text input: </label>
+		<input name="text-5" id="text-5" type="text" value="" data-clear-btn="true">
+		<input type="button" id="submit2" value="SUBMIT"/>
+		
+    <!--</fieldset> -->
+	</ul>
+
+  </div>
+  
+</div>
+  </body>
+</html>

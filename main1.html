@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>main1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/spinbox/latest/jqm-spinbox.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+    function goToFile1() {
+	      <!--window.open("file2.html"); -->
+		  window.location.href = "alphabets1.html" 
+		  id="alphabets"
+	    }
+	</script>
+	<script>
+    function goToFile2() {
+	      <!--window.open("file2.html"); -->
+		  window.location.href = "numbers1.html" 
+	    }
+	</script>
+	<script>
+    function goToFile4() {
+	      <!--window.open("file2.html"); -->
+		  window.location.href = "shapes1.html" 
+	    }
+	</script>
+	<script>
+    function goToFile3() {
+	      <!--window.open("file2.html"); -->
+		  window.location.href = "funtime1.html" 
+	    }
+	</script>
+
+	<script>
+    function goToFile5() {
+	      <!--window.open("file2.html"); -->
+		  window.location.href = "playtime1.html" 
+	    }
+	</script>
+
+	<script type="text/javascript">
+	var myImage = document.getElementById("mainImage");
+
+	var imageArray = ["_images/one.jpg","_images/two.jpg","_images/three.jpg",
+  "_images/four.jpg","_images/five.jpg","_images/six.jpg"];
+
+var imageIndex = 0; 
+
+function changeImage() {
+  myImage.setAttribute("src",imageArray[imageIndex]);
+  imageIndex = (imageIndex + 1) % imageArray.length;
+}
+
+setInterval(changeImage, 500);
+</script>
+	
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- main title -->
+      <div id="u0" class="Title_1">
+        <div id="u0_div" class=""></div>
+        <div id="u0_text" class="text ">
+          <p style="font-size:20px;"><span style="font-family:'Comic Sans MS Bold', 'Comic Sans MS';">PRE-SCHOOL</span></p><p><span style="font-family:'Comic Sans MS Bold', 'Comic Sans MS';font-size:20px;">EDUTAINMENT</span><span style="font-family:'Arial Bold', 'Arial';">&nbsp;</span></p>
+        </div>
+      </div>
+          <!-- main image -->
+      <div id="u1">
+        <img id="u1_img1" class="img " src="images/havefun.jpg" style="width: 100%;"/>
+      </div>
+
+      <!-- sub title alphabets -->
+      <div id="u2" class="sub title_1">
+        <div id="u2_div" class=""></div>
+        <div id="u2_text" class="text ">
+          <p><span style="font-family:'Comic Sans MS Bold', 'Comic Sans MS';"><a href="#pagealphabet" onclick="goToFile1(); return false;">Alphabets</a></span></p>
+        </div>
+      </div>
+
+      <!-- sub title number -->
+      <div id="u3" class="sub title 2">
+        <div id="u3_div" class=""></div>
+        <div id="u3_text" class="text ">
+          <p><span style="font-family:'Comic Sans MS Bold', 'Comic Sans MS';"><a href="#pagenumber" onclick="goToFile2(); return false;">Numbers</a></span></p>
+        </div>
+      </div>
+
+	  <!-- sub title shapes -->
+      <div id="u5" class="sub title 4">
+        <div id="u5_div" class=""></div>
+        <div id="u5_text" class="text ">
+          <p><span style="font-family:'Comic Sans MS Bold', 'Comic Sans MS';"><a href="#pagenumber" onclick="goToFile4(); return false;">Shapes</a></span></p>
+        </div>
+      </div>
+	  
+      <!-- sub title fun time -->
+      <div id="u4" class="sub title_3">
+        <div id="u4_div" class=""></div>
+        <div id="u4_text" class="text ">
+          <p><span style="font-family:'Comic Sans MS Bold', 'Comic Sans MS';"><a href="#funtime" onclick="goToFile3(); return false;">Fun Time !</a></span></p>
+        </div>
+      </div>
+	  
+	   <!-- sub title play time -->
+      <div id="u6" class="sub title_5">
+        <div id="u6_div" class=""></div>
+        <div id="u6_text" class="text ">
+          <p><span style="font-family:'Comic Sans MS Bold', 'Comic Sans MS';"><a href="#playtime" onclick="goToFile5(); return false;">Play Time !</a></span></p>
+        </div>
+      </div>
+	  
+    </div>
+  </body>
+</html>

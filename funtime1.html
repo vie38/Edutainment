@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>fun time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/spinbox/latest/jqm-spinbox.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script>
+    function goToFile1() {
+	      <!--window.open("file2.html"); -->
+		  window.location.href = "main1.html" 
+//		  id="alphabets"
+	    }
+	</script>
+	
+	<script>
+$(document).ready(function(){
+    $("h5").click(function(){
+        $(this).hide();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function () {
+    $('button[class^="1"]').click(function () {
+        $(this).hide();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  var hText = "DOG";
+  
+  $("#head1").click(function() {
+    $("#h21").text(hText);
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  var imageName = ["images/apple.jpg", "images/rabbit.jpg", "images/dog.jpg"];
+  var indexNum = 0;
+
+  $("#picture1").click(function() {
+
+    $("#picture1").fadeOut(100, function() {
+      $("#picture1").attr("src", imageName[indexNum]);
+      indexNum++;	
+      if (indexNum > 2) {indexNum = 0;}
+      $("#picture1").fadeIn(300);
+    });	 
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  var hText1 = "INK";
+
+  $("#head2").click(function() {
+    $("#h22").text(hText1);
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  var imageName1 = ["images/yoyo.jpg", "images/ink.jpg", "images/zebra.jpg"];
+  var indexNum1 = 0;
+
+  $("#picture2").click(function() {
+
+    $("#picture2").fadeOut(100, function() {
+      $("#picture2").attr("src", imageName1[indexNum1]);
+      indexNum1++;	
+      if (indexNum1 > 2) {indexNum1 = 0;}
+      $("#picture2").fadeIn(300);
+    });	 
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function() {
+  var hText1 = "SNOWMAN";
+
+  $("#head3").click(function() {
+    $("#h23").text(hText1);
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  var imageName1 = ["images/snowman.jpg", "images/ink.jpg", "images/giraffe.jpg"];
+  var indexNum1 = 0;
+
+  $("#picture3").click(function() {
+
+    $("#picture3").fadeOut(100, function() {
+      $("#picture3").attr("src", imageName1[indexNum1]);
+      indexNum1++;	
+      if (indexNum1 > 2) {indexNum1 = 0;}
+      $("#picture3").fadeIn(300);
+    });	 
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  var hText1 = "GIRAFFE";
+
+  $("#head4").click(function() {
+    $("#h24").text(hText1);
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  var imageName1 = ["images/window.jpg", "images/rabbit.jpg", "images/lion.jpg"];
+  var indexNum1 = 0;
+
+  $("#picture4").click(function() {
+
+    $("#picture4").fadeOut(100, function() {
+      $("#picture4").attr("src", imageName1[indexNum1]);
+      indexNum1++;	
+      if (indexNum1 > 2) {indexNum1 = 0;}
+      $("#picture4").fadeIn(300);
+    });	 
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  var hText1 = "YO-YO";
+
+  $("#head5").click(function() {
+    $("#h25").text(hText1);
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  var imageName1 = ["images/rat.jpg", "images/tree.jpg", "images/yoyo.jpg"];
+  var indexNum1 = 0;
+
+  $("#picture5").click(function() {
+
+    $("#picture5").fadeOut(100, function() {
+      $("#picture5").attr("src", imageName1[indexNum1]);
+      indexNum1++;	
+      if (indexNum1 > 2) {indexNum1 = 0;}
+      $("#picture5").fadeIn(300);
+    });	 
+  });
+});
+</script>
+
+
+
+
+  </head>
+  <body>
+    <li><a href="#main1" onclick="goToFile1(); return false;">Home</a></li>
+       
+    <div id="pagealphabet" data-role="tabs">
+	
+     <div data-role="navbar">
+    <ul>
+      <li><a href="#clickme" data-ajax="false">Click Me</a></li>
+      <li><a href="#move1" data-ajax="false">Click Me1</a></li>
+	  <li><a href="#move2" data-ajax="false">Click Me2</a></li>
+	  <!-- <li><a href="ajax-content-ignore.html" data-ajax="false">three</a></li> -->
+    </ul>
+  </div>
+  <div class="ui-body-d ui-content" id="clickme">
+  <img id="u1_img2" class="img " src="images/alphabet2.jpg" align="right-side" style="width: 40%;"/>
+  <h1>CLICK ME</h1>
+  	<ul id="itemlist" data-role="listview" data-inset="true" data-filter="false" data-autodividers="false">
+        <li><img src="images/apple.jpg"><h4>LEAF</h4><h5>APPLE</h5><h4>CAT</h4><li/>
+		<li><img src="images/dog.jpg"><h5>DOG</h5><h4>CAT</h4><h4>GIANT</h4><li/>
+		<li><img src="images/zebra.jpg"><h4>TREE</h4><h4>DONKEY</h4><h5>ZEBRA</h5><li/>
+		<li><img src="images/fish.jpg"><h5>FISH</h5><h4>DOG</h4><h4>HEN</h4><li/>
+		<li><img src="images/nest.jpg"><h4>MONKEY</h4><h5>NEST</h5><h4>ORANGE</h4><li/>
+		
+    </ul> 
+   </div>
+   
+   <div class="ui-body-d ui-content" id="move1">
+   <img id="u1_img2" class="img " src="images/fun.jpg" align="right-side" style="width: 40%;"/>
+  <h1>DO NOT CLICK ME</h1>
+
+<h3>1.XYLOPHONE</h3><br>
+
+<button class="1"><img id="div1" src="images/apple.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class ="1"><img id="div2" src="images/giant.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="Cor"><img id="Cor1" src="images/xylophone.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="1"><img id="div3" src="images/cat.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<h3>2.TREE</h3><br>
+
+<button class="Cor"><img id="Cor1" src="images/tree.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="1"><img id="div1" src="images/giraffe.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="1"><img id="div2" src="images/ink.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="1"><img id="div3" src="images/envelope.jpg" alt="" width="80" height="80"style="position: relative; left: 10px;"></button>
+
+<h3>3.AEROPLANE</h3><br>
+
+<button class="1"><img id="div1" src="images/zebra.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="Cor3"><img id="Cor3" src="images/aeroplane.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="1"><img id="div2" src="images/cat.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="1"><img id="div3" src="images/fish.jpg" alt="" width="80" height="80"style="position: relative; left: 10px;"></button>
+
+<h3>4.LEMON</h3><br>
+
+<button class="1"><img id="div1" src="images/ink.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="1"><img id="div2" src="images/leaf.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="1"><img id="div3" src="images/elephant.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="Cor4"><img id="Cor4" src="images/lemon.jpg" alt="" width="80" height="80"style="position: relative; left: 10px;"></button>
+
+<h3>5.MONKEY</h3><br>
+
+<button class="1"><img id="div1" src="images/nest.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="1"><img id="div2" src="images/orange.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="1"><img id="div3" src="images/rabbit.jpg" alt="" width="80" height="80" style="position: relative; left: 10px;"></button>
+
+<button class="Cor5"><img id="Cor4" src="images/monkey.jpg" alt="" width="80" height="80"style="position: relative; left: 10px;"></button>
+
+
+   </div>
+   
+   <div class="ui-body-d ui-content" id="move2">
+   <img id="u1_img2" class="img " src="images/fun2.jpg" align="right-side" style="width: 40%;"/>
+   <li>
+  <h3 id ="head1">1. CLICK ME</h3>
+    
+ <h2 id="h21"></h2>
+ <img id ="picture1" src="images/rabbit.jpg" alt="rabbit1" width="100" height="100" />
+ </li> 
+ 
+ <li>
+ <h3 id ="head2">2. CLICK ME</h3>
+  
+ <h2 id="h22"></h2>
+ <img id ="picture2" src="images/ink.jpg" alt="ink1" width="100" height="100" />
+ </li>
+  
+   <li>
+  <h3 id ="head3">3. CLICK ME</h3>
+    
+ <h2 id="h23"></h2>
+ <img id ="picture3" src="images/snowman.jpg" alt="snowman1" width="100" height="100" />
+ </li> 
+ 
+ <li>
+ <h3 id ="head4">4. CLICK ME</h3>
+  
+ <h2 id="h24"></h2>
+ <img id ="picture4" src="images/giraffe.jpg" alt="giraffe11" width="100" height="100" />
+ </li>
+ <li>
+ <h3 id ="head5">5. CLICK ME</h3>
+  
+ <h2 id="h25"></h2>
+ <img id ="picture5" src="images/yoyo.jpg" alt="yoyo1" width="100" height="100" />
+ </li>
+  
+  
+</div>
+
+  </body>
+</html>
